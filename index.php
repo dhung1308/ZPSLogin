@@ -253,7 +253,7 @@
             <script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
 
 			<script>
-				function init() {
+				function initWeb() {
                     console.log("Welcome ZingPlay !");
                     AppleID.auth.init({
                         clientId : 'pay.zingplay.com',
@@ -268,7 +268,7 @@
                 };
 			</script>
     </head>
-    <body onload="init()">
+    <body onload="initWeb()">
 		<h1>Zing Play</h1>	
         
         <button id="appleid-signin" class="signin-button" onclick="singInApple()">Sign In Apple</button>
