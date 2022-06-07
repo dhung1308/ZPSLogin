@@ -32,6 +32,6 @@
     <body onload="initWeb()">
 		<h1>Zing Play</h1>	
         
-        <button id="appleid-signin" class="signin-button" onclick="singInApple()">Sign In Apple</button>
+        <div id="appleid-signin" class="signin-button" onclick="singInApple()">Sign In Apple</div>
     </body>
 </html>
