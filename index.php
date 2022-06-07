@@ -250,26 +250,27 @@
             <meta name="appleid-signin-redirect-uri" content="[REDIRECT_URI]">
             <meta name="appleid-signin-state" content="[STATE]">
             
+            <script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
+
 			<script>
 				function init() {
                     console.log("Welcome ZingPlay !");
-
-                    setTimeout(() => {
-                        console.log("Auto Login AppleID");
-                        AppleID.auth.init({
-                            clientId : 'pay.zingplay.com',
-                            scope : 'name email',
-                            redirectURI: 'https://zpslogin.herokuapp.com/login.html',
-                            state : 'origin:web'
-                        });
-                    }, 5000);
-                }			
+                    AppleID.auth.init({
+                        clientId : 'pay.zingplay.com',
+                        scope : 'name email',
+                        redirectURI: 'https://zpslogin.herokuapp.com/login.html',
+                        state : 'origin:web'
+                    });
+                }
+                
+                function singInApple () => {
+                    window.AppleID.auth.signIn();
+                };
 			</script>
     </head>
     <body onload="init()">
 		<h1>Zing Play</h1>	
         
-        <div id="appleid-signin" class="signin-button" data-color="black" data-border="true" data-type="sign in"></div>
-        <script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
+        <button id="appleid-signin" class="signin-button" onclick="singInApple()">Sign In Apple</button>
     </body>
 </html>
