@@ -7,7 +7,7 @@
         <meta name="description" lang="en" content="">
         <meta name="appleid-signin-client-id" content="pay.zingplay.com">
         <meta name="appleid-signin-scope" content="name email">
-        <meta name="appleid-signin-redirect-uri" content="https://zpslogin.herokuapp.com/login.html">
+        <meta name="appleid-signin-redirect-uri" content="https://zpslogin.herokuapp.com/login.php">
         <meta name="appleid-signin-state" content="origin:web">
             
         <script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
@@ -19,7 +19,7 @@
                 AppleID.auth.init({
                     clientId : 'pay.zingplay.com',
                     scope : 'name email',
-                    redirectURI: 'https://zpslogin.herokuapp.com/login.html',
+                    redirectURI: 'https://zpslogin.herokuapp.com/login.php',
                     state : 'origin:web'
                 });
             }
