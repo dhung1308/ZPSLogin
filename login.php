@@ -22,11 +22,14 @@
             function callback() {
                 var token = "<?php echo $token;?>";
                 console.log("Token : " + token)
+                document.getElementById("lbToken").innerText = token;
                 window.location = "zpslogin:://token/" + token;
             }
         </script>
     </head>
     <body onload="callback()">
-		<h1>You are Login Success !!!</h1>	    
+		<h1>Login Success !!!</h1>
+        <h3>Redirecting...</h3>	    
+        <p id="lbToken"></p>
     </body>
 </html>
