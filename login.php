@@ -22,7 +22,7 @@
             function callback() {
                 var token = "<?php echo $token;?>";
                 console.log("Token : " + token)
-                window.location = "zpslogin:://zpslogin/" + token;
+                window.location = "zpslogin:://token/" + token;
             }
         </script>
     </head>
