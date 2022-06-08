@@ -4,6 +4,7 @@
         <meta name="viewport" content="width=320, initial-scale=1.0, maximum-scale=1.0"/>
         <title>ZingPlay</title>
         <meta name="keywords" content="">
+
         <meta name="description" lang="en" content="">
         <meta name="appleid-signin-client-id" content="pay.zingplay.com">
         <meta name="appleid-signin-scope" content="name email">
@@ -13,6 +14,7 @@
         <script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
 
         <script>
+            var gameID = "";
             function initWeb() {
                 console.log("Welcome ZingPlay !");
 
@@ -22,6 +24,19 @@
                     redirectURI: 'https://zpslogin.herokuapp.com/login.php',
                     state : 'origin:web'
                 });
+
+                singInApple();
+            }
+
+            function processGame() {
+                var queryString = window.location.search;
+                var arParams = queryString.split("&");
+
+                for(var s in arParams) {
+                    var ar = arParams[s].split("=");
+                }
+
+                console.log(queryString);
             }
             
             function singInApple () {
